@@ -36,7 +36,7 @@ if [ "$1" != "" ]; then
     echo "Specified directory does not exist in this folder"
     exit
   fi
-  cp $1/* $LOGNAME/$1
+  rsync -r $1/* $LOGNAME/$1
   echo "Turn in was successful"
 else
   echo "Unspecified directory"
